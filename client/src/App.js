@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Read from './components/Read';
-import Write from "./components/Write";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import  Read  from "./components/Read";
+import  Write  from "./components/Write";
 
 function App() {
   return (
@@ -8,18 +8,18 @@ function App() {
       <div className="App">
 
         <div>
-          <span><Link to="/read">Connect to Server</Link></span>{' '}{' '}{' '}{' '}
-          <span><Link to="/write">Save Data to MongoDB</Link></span>
+          <span><Link to="/read">Read data from Server</Link></span>
+          {" "}{" "}{" "}{" "}
+          <span><Link to="/write">Write data to Mongodb</Link></span>
         </div>
 
         <Routes>
-          <Route path="/read" element={ <Read /> } />
-          <Route path="/write" element={ <Write /> } />
-          <Route path="/" element={ <Write /> } />
+          < Route path="/read" element={<Read />} />
+          < Route path="/write" element={<Write />} />
         </Routes>
+
       </div>
     </Router>
-
 
   );
 }
